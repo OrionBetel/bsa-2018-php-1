@@ -6,6 +6,15 @@ class EmojiGenerator
 {
     public function generate(): \Generator
     {
-        // @todo
+        function emoji_gen()
+        {
+            $emojis = ['🚀', '🚃', '🚄', '🚅', '🚇'];
+            
+            for ($i = 0; $i < 5; $i++) {
+                yield $emojis[$i];
+            }
+        }
+
+        return emoji_gen();
     }
 }
