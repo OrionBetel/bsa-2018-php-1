@@ -15,7 +15,7 @@ class CryptoCurrency implements Currency
 {
     private $dailyPrice;
 
-    public function __construct(int $price)
+    public function __construct(float $price)
     {
         $this->dailyPrice = $price;
     }
@@ -30,7 +30,7 @@ class CryptoCurrency implements Currency
 
     public function getDailyPrice(): float
     {
-        return (float) $this->dailyPrice;
+        return $this->dailyPrice;
     }
 
     public function getLogoUrl(): string
